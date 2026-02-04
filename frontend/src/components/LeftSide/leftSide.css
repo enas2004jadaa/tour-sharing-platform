@@ -1,0 +1,13 @@
+.container-left {
+  width: 15%;     
+  top: 0;               
+  left: 0;               
+  z-index: 1;
+  background: #fff;      
+  overflow-y: auto;       
+  position: sticky;
+  height: 105vh;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}

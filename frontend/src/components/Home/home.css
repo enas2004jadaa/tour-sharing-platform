@@ -1,0 +1,731 @@
+/* Home Container */
+.home-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container-left {
+    width: 15%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: 20px 16px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f1f1f1;
+}
+.container-post-list{
+    width: 60%;
+}
+
+/* Right Side Container */
+.container-right {
+    width: 15%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: 20px 16px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f1f1f1;
+}
+
+.container-right::-webkit-scrollbar {
+    width:  2px;
+}
+
+.container-right::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.container-right::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.container-right::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* PostList (Middle Content) */
+.post-list-container {
+    flex: 1;
+    max-width: 800px;
+}
+
+.post-card {
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+/* Create Tour Card */
+.card-create-tour {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 16px;
+    border: 1px solid #f0f0f0;
+}
+
+/* Quick Links Card */
+.card-quick-link {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Right Side Cards */
+.card-top-categories, .card-recommended-tours {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Post Card Styles */
+.container-tour {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    margin: 16px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .home-container {
+        gap: 20px;
+        padding: 20px;
+    }
+    .user-info-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-left {
+        width: 20%;
+    }
+    
+    .container-right {
+        width: 15%;
+    }
+    
+    .post-list-container {
+        max-width: 800px;
+    }
+}
+
+/* Small Desktops and Large Tablets (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+    .home-container {
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .container-left {
+        width: 15%;
+    }
+    .container-post-list{
+        width: 50%;
+    }
+    .container-info-tour{
+        flex-direction: column;
+    }
+    .large-content{
+        width: 100%;
+    }   
+    .small-info{
+        width: 100%;
+    }
+    .small-image{
+        height: auto;
+    }
+    .user-info-section{
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+    .create-tour{
+        padding: 16px;
+    }
+    .container-right {
+        width: 280px;
+        padding: 16px 12px;
+    }
+    
+    .post-list-container {
+        max-width: 700px;
+    }
+    
+    .post-card {
+        padding: 0 16px;
+    }
+    
+    .category-item, .tour-item {
+        padding: 10px 16px;
+    }
+    
+    .header-top-tours, .header-top-categories {
+        padding: 16px 20px 12px;
+    }
+    
+    /* Create Tour Adjustments */
+    .user-info-section {
+        padding: 20px;
+    }
+    
+    .create-section {
+        padding: 20px;
+    }
+    
+    /* Post Card Adjustments */
+    .head-tour {
+        padding: 20px 24px;
+    }
+    
+    .title-tour {
+        font-size: 24px;
+    }
+    
+    .large-content, .small-info {
+        padding: 24px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .container-left {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container-post-list{
+        width: 100%;
+    }
+    
+    .container-left.mobile-open {
+        left: 0;
+    }
+    
+    .post-list-container {
+        width: 100%;
+        padding: 16px;
+        order: 1;
+        max-width: none;
+    }
+    
+    .post-card {
+        padding: 0;
+    }
+    
+    .container-right {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 16px;
+        margin-top: 0;
+    }
+    
+    /* Mobile menu trigger */
+    .mobile-menu-trigger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 999;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    /* Create Tour Dialog Adjustments */
+    .create-tour-dialog {
+        margin: 0;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .dialog-header {
+        padding: 24px;
+    }
+
+    .tour-form {
+        padding: 24px;
+    }
+
+    .location-section {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .cancel-btn, .submit-btn {
+        width: 100%;
+    }
+
+    .map-dialog {
+        margin: 0;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    /* Post Card Adjustments */
+    .container-info-tour {
+        flex-direction: column;
+    }
+    
+    .large-content, .small-info {
+        width: 100%;
+    }
+    
+    .small-info {
+        border-left: none;
+        border-top: 1px solid #f1f5f9;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 24px;
+    }
+    
+    .map-location-tour,
+    .video-embed,
+    .small-image {
+        min-width: 250px;
+        flex: 1;
+    }
+    
+    .head-tour {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .action-tour {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .action-buttons {
+        justify-content: center;
+    }
+    
+    .add-comment {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .submit-comment {
+        align-self: flex-end;
+        min-width: 120px;
+    }
+}
+
+/* Large Mobile (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .home-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .container-left {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 260px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .container-left.mobile-open {
+        left: 0;
+    }
+    .container-post-list{
+        width: 100%;
+    }
+    .post-list-container {
+        width: 100%;
+        padding: 12px;
+        order: 1;
+    }
+    
+    .post-card {
+        padding: 0;
+    }
+    
+    .container-right {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 12px;
+    }
+    
+    .card-top-categories, .card-recommended-tours {
+        margin-bottom: 16px;
+    }
+    
+    .category-item, .tour-item {
+        padding: 12px 16px;
+    }
+    
+    .header-top-tours, .header-top-categories {
+        padding: 16px 20px 12px;
+    }
+    
+    .mobile-menu-trigger {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 999;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px;
+        cursor: pointer;
+    }
+    
+    /* Create Tour Adjustments */
+    .user-info-section {
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .avatar-image-left,
+    .avatar-placeholder {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .user-name-left {
+        font-size: 16px;
+    }
+    
+    .create-section {
+        padding: 16px;
+    }
+    
+    /* Post Card Adjustments */
+    .head-tour {
+        padding: 16px 20px;
+    }
+    
+    .title-tour {
+        font-size: 20px;
+    }
+    
+    .large-content, .small-info {
+        padding: 20px;
+    }
+    
+    .l-image {
+        height: 300px;
+    }
+    
+    .small-info {
+        flex-direction: column;
+    }
+    
+    .comments-section {
+        padding: 20px;
+    }
+}
+
+/* Small Mobile (375px - 575px) */
+@media (max-width: 575px) and (min-width: 375px) {
+
+    .home-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .container-left {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+    
+    .container-left.mobile-open {
+        left: 0;
+    }
+    .container-post-list{
+        width: 100%;
+    }
+    .post-list-container {
+        width: 100%;
+        padding: 8px;
+        order: 1;
+    }
+    
+    .post-card {
+        padding: 0;
+    }
+    
+    .container-right {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 8px;
+    }
+    
+    .card-top-categories, .card-recommended-tours {
+        margin-bottom: 12px;
+        border-radius: 12px;
+    }
+    
+    .category-item, .tour-item {
+        padding: 10px 12px;
+    }
+    
+    .header-top-tours, .header-top-categories {
+        padding: 14px 16px 10px;
+    }
+    
+    .header-content {
+        font-size: 16px;
+    }
+    
+    .category-name, .title-tour-top {
+        font-size: 13px;
+    }
+    
+    .mobile-menu-trigger {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 999;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    /* Create Tour Adjustments */
+    .dialog-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .tour-form {
+        padding: 20px;
+    }
+
+    .image-previews {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-info-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    /* Post Card Adjustments */
+    .head-tour {
+        padding: 12px 16px;
+    }
+    
+    .title-tour {
+        font-size: 18px;
+    }
+    
+    .large-content, .small-info {
+        padding: 16px;
+    }
+    
+    .l-image {
+        height: 250px;
+    }
+    
+    .author-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .action-tour {
+        padding: 12px 16px;
+    }
+    
+    .comments-section {
+        padding: 16px;
+    }
+}
+
+/* Extra Small Mobile (under 375px) */
+@media (max-width: 374px) {
+    .home-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .container-left {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+    
+    .container-left.mobile-open {
+        left: 0;
+    }
+    
+    .post-list-container {
+        width: 100%;
+        padding: 6px;
+        order: 1;
+    }
+    .container-post-list{
+        width: 100%;
+    }
+    
+    .post-card {
+        padding: 0;
+    }
+    
+    .container-right {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: 2;
+        padding: 6px;
+    }
+    
+    .card-top-categories, .card-recommended-tours {
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    
+    .category-item, .tour-item {
+        padding: 8px 10px;
+    }
+    
+    .header-top-tours, .header-top-categories {
+        padding: 12px 14px 8px;
+    }
+    
+    .header-content {
+        font-size: 15px;
+    }
+    
+    .category-content, .tour-item {
+        gap: 8px;
+    }
+    
+    .icon-category {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .image-tour-item {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .mobile-menu-trigger {
+        display: block;
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        z-index: 999;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 6px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    
+    /* Create Tour Adjustments */
+    .dialog-header {
+        padding: 20px;
+    }
+    
+    .tour-form {
+        padding: 16px;
+    }
+    
+    .form-input, .form-textarea, .form-select {
+        padding: 12px 14px;
+    }
+    
+    /* Post Card Adjustments */
+    .head-tour {
+        padding: 10px 12px;
+    }
+    
+    .title-tour {
+        font-size: 16px;
+    }
+    
+    .large-content, .small-info {
+        padding: 12px;
+    }
+    
+    .l-image {
+        height: 200px;
+    }
+    
+    .description-tour {
+        font-size: 14px;
+    }
+    
+    .comments-section {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,172 @@
+/* ticketManagement.css */
+.ticket-management {
+    min-height: 100vh;
+}
+
+/* Global styles for ticket management */
+.ticket-management * {
+    box-sizing: border-box;
+}
+
+.ticket-management body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f5f7fa;
+}
+
+/* Animation classes */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-4 {
+    margin-bottom: 24px;
+}
+
+.mt-4 {
+    margin-top: 24px;
+}
+
+.p-4 {
+    padding: 24px;
+}
+
+/* Status color utilities */
+.status-open {
+    color: #48bb78;
+}
+
+.status-in-progress {
+    color: #ed8936;
+}
+
+.status-closed {
+    color: #a0aec0;
+}
+
+/* Loading states */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Print styles */
+@media print {
+    .ticket-management {
+        background: white !important;
+    }
+    
+    .create-ticket-btn,
+    .close-ticket-btn,
+    .back-button,
+    .message-input-form {
+        display: none !important;
+    }
+    
+    .ticket-card,
+    .ticket-info,
+    .messages-section {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .ticket-card,
+    .ticket-info,
+    .messages-section {
+        border: 2px solid #000;
+    }
+    
+    .status-badge,
+    .status-badge-large {
+        border: 1px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 480px) {
+    .ticket-management {
+        padding: 8px;
+    }
+    
+    .ticket-card,
+    .ticket-info,
+    .messages-section {
+        padding: 16px;
+    }
+    
+    .message-content {
+        max-width: 90%;
+    }
+}
+
+/* Focus styles for accessibility */
+.ticket-management button:focus,
+.ticket-management select:focus,
+.ticket-management textarea:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Selection styles */
+.ticket-management ::selection {
+    background: rgba(102, 126, 234, 0.2);
+}
+
+.ticket-management ::-moz-selection {
+    background: rgba(102, 126, 234, 0.2);
+}

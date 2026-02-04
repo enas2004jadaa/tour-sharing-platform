@@ -1,0 +1,543 @@
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* User Profile Header */
+.user-profile-header-profile {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(235, 235, 235, 0.8);
+  margin-bottom: 4px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-profile-header-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2 );
+  background-size: 200% 100%;
+}
+
+
+.user-avatar-section-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.user-avatar-profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #667eea;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.user-avatar-profile:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 4px 15px rgba(102, 126, 234, 0.4),
+    0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.user-actions-profile {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-profile-btn-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #667eea, #764ba2 );
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.edit-profile-btn-profile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(90deg, #667eea, #764ba2 );
+}
+
+.edit-profile-btn-profile:active {
+  transform: translateY(0);
+}
+
+.user-info-section-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-name-profile {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #667eea, #764ba2 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.user-bio-profile {
+  color: #6c757d;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 600px;
+  padding: 15px 20px;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  position: relative;
+}
+.container-name-stats{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.user-bio-profile::before {
+  font-size: 3rem;
+  color: #667eea;
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.user-stats-profile {
+  display: flex;
+  
+  gap: 20px;
+  max-width: 500px;
+}
+
+.stat-profile {
+  text-align: center;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #ffffff, #f8f9ff);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.stat-profile:hover::before {
+  left: 100%;
+}
+
+.stat-profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.stat-number-profile {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #667eea;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.stat-profile:hover .stat-number-profile {
+  color: #667eea;
+  transform: scale(1.1);
+}
+
+.stat-label-profile {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Profile Tabs */
+.profile-tabs {
+  display: flex;
+  background: linear-gradient(135deg, #ffffff, #f8f9ff);
+  border-radius: 15px;
+  padding: 8px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  gap: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 18px 24px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.tab-button:hover::before {
+  left: 100%;
+}
+
+.tab-button:hover {
+  color: #764ba2;
+  background: rgba(102, 126, 234, 0.05);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 
+    0 4px 15px rgba(102, 126, 234, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
+}
+
+/* Tours Section */
+.tours-section {
+  background: linear-gradient(135deg, #ffffff, #f8f9ff);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 1px 8px rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.tours-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2 );
+  background-size: 200% 100%;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.tours-content {
+  min-height: 400px;
+  position: relative;
+}
+
+/* Empty States */
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+  color: #6c757d;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.empty-state::before {
+  content: '✈️';
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.empty-state h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.create-tour-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.create-tour-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8, #4c51bf);
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 1.2rem;
+  color: #6c757d;
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #6c757d;
+}
+
+.error-state::before {
+  content: '⚠️';
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.error-state h2 {
+  color: #dc3545;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.error-state p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+  }
+
+  .user-profile-header-profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .user-avatar-profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  .user-name-profile {
+    font-size: 2rem;
+  }
+
+  .user-stats-profile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .profile-tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tours-section {
+    padding: 25px 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-stats-profile {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-profile {
+    padding: 15px 10px;
+  }
+  
+  .stat-number-profile {
+    font-size: 1.8rem;
+  }
+  
+  .user-bio-profile {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+  
+  .empty-state {
+    padding: 60px 20px;
+  }
+  
+  .empty-state h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Additional Micro-interactions */
+.tab-button {
+  position: relative;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #667eea;
+}
+
+/* Smooth transitions for all interactive elements */
+.user-avatar-profile,
+.edit-profile-btn-profile,
+.stat-profile,
+.tab-button,
+.create-tour-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.edit-profile-btn-profile:focus,
+.tab-button:focus,
+.create-tour-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* Print styles */
+@media print {
+  .profile-container {
+    background: white !important;
+  }
+  
+  .user-profile-header-profile,
+  .tours-section {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
