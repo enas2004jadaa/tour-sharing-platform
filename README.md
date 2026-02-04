@@ -1,2 +1,22 @@
-# tour-sharing-platform
-A graduation project developed as a full-stack web application that enables users to share, explore, and interact with tour experiences in a secure and community-driven environment. The platform focuses on secure authentication, data privacy, and structured content sharing without commercial influence.
+# Tour Sharing Platform
+
+Graduation project focused on building a community-based tour sharing platform.
+
+## Features
+- User registration & authentication
+- Create and share tours with images and locations
+- Commenting and rating system
+- Secure access and role-based permissions
+
+## Technologies Used
+- Frontend: React / Vite
+- Backend: Node.js / Express
+- Database: MongoDB
+- Cloud: Cloudinary
+- Authentication & Security
+
+## Project Type
+Graduation Project – Faculty of Information Technology
+
+## Notes
+This project was developed for academic purposes.
